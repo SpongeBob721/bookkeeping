@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:text="costTitle"
+        android:textColor="#333333"
+        android:ellipsize="marquee"
+        android:textSize="16sp"
+        android:layout_alignParentLeft="true"
+        android:gravity="left|bottom"/>
+
+    <TextView
+        android:id="@+id/tv_in_out"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left|top"
+        android:textSize="13dp"
+        android:layout_below="@id/tv_title"
+        android:text="in_out"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/tv_cost"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center|top"
+        android:textSize="11sp"
+        android:text="costDate"/>
+
+    <TextView
+        android:id="@+id/tv_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="bottom|right"
+        android:textSize="15sp"
+        android:textColor="#ff0000"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:text="+30.00"/>
+
+</RelativeLayout>

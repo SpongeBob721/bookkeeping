@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/R_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#005ABD">
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="140dp"/>
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/img_logo"
+            android:layout_marginTop="240dp"
+            android:background="@drawable/btn_start"
+            android:text="开启记账"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

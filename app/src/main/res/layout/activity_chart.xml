@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_page">
+
+    <RelativeLayout
+        android:id="@+id/chart_R_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:id="@+id/chart__R_2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/frame">
+
+            <Button
+                android:id="@+id/btn_up"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/up" />
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="本月"
+                android:textColor="#005ABD"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_down"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/tv_month"
+                android:background="@drawable/down" />
+
+            <TextView
+                android:id="@+id/tv_expend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_up"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="4dp"
+                android:text="支出 "
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_expendnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_up"
+                android:layout_toRightOf="@id/tv_expend"
+                android:text="¥0.00"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_up"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="4dp"
+                android:text="收入 "
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_incomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_down"
+                android:layout_toRightOf="@id/tv_income"
+                android:text="¥0.00"
+                android:textColor="#FF0000"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/chart_R_3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ececec"
+            android:layout_below="@id/chart__R_2">
+            <Button
+                android:id="@+id/btn_account_expend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支出"
+                android:textSize="21sp"
+                android:layout_centerVertical="true"
+                android:textColor="#000000"
+                android:layout_marginLeft="100dp"
+                android:background="#ffffff"/>
+            <Button
+                android:id="@+id/btn_account_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收入"
+                android:background="#ececec"
+                android:textSize="21sp"
+                android:layout_centerVertical="true"
+                android:textColor="#000000"
+                android:layout_marginLeft="200dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/chart_R_4"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:layout_below="@id/chart_R_3"
+            android:background="@drawable/frame">
+
+            <RelativeLayout
+                android:id="@+id/layout_three"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <com.hedan.piechart_library.PieChart_View
+                    android:id="@+id/pie_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    app:isAnimation="true"
+                    app:isTouchFlag="true"
+                    app:animaDuration="1000"
+                    app:mRadius="100dp"
+                    app:nameColor="#f00"
+                    app:name=" "
+                    app:nameSize="16sp"
+                    app:nameOrientation="horizontal"
+                    app:pieChartWidth="35dp"
+                    app:alphaWidth="10dp"
+                    app:alphaPieColor="#fff"
+                    app:alphaPieTran="100"
+                    app:segmentAngle="0.5"
+                    app:startAngle="180"
+                    app:textColor="#000"
+                    app:textSize="12sp"
+                    app:textOrientation="path"
+                    app:inCricleColor="#eeeeee"
+                    />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/laout_four"
+                android:layout_below="@id/layout_three"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="100dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center">
+                    <RelativeLayout
+                        android:id="@+id/expenditure_1"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/expcolor_1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="#0baf97"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:id="@+id/expname_1"
+                            android:layout_toRightOf="@id/expcolor_1"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:text="花费一"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/expenditure_2"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/expcolor_2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="#0baf97"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:id="@+id/expname_2"
+                            android:layout_toRightOf="@id/expcolor_2"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:text="花费二"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/expenditure_3"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/expcolor_3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="#0baf97"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:id="@+id/expname_3"
+                            android:layout_toRightOf="@id/expcolor_3"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:text="花费三"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/expenditure_4"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/expcolor_4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="#0baf97"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:id="@+id/expname_4"
+                            android:layout_toRightOf="@id/expcolor_4"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:text="花费四"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center">
+                    <RelativeLayout
+                        android:id="@+id/expenditure_5"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/expcolor_5"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="#0baf97"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:id="@+id/expname_5"
+                            android:layout_toRightOf="@id/expcolor_5"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:text="花费五"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/expenditure_6"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/expcolor_6"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="#0baf97"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:id="@+id/expname_6"
+                            android:layout_toRightOf="@id/expcolor_6"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:text="花费六"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/expenditure_7"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/expcolor_7"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="#0baf97"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:id="@+id/expname_7"
+                            android:layout_toRightOf="@id/expcolor_7"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:text="花费七"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/expenditure_8"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/expcolor_8"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="#0baf97"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:id="@+id/expname_8"
+                            android:layout_toRightOf="@id/expcolor_8"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:text="花费八"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/id_recylerView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+            <!--</android.support.v7.widget.RecyclerView>-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/chart_R_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/chart_R_4"
+            android:background="@drawable/frame">
+
+            <Button
+                android:id="@+id/btn_payment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/payment" />
+
+            <TextView
+                android:id="@+id/tv_paynote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_payment"
+                android:layout_marginLeft="40dp"
+                android:text="账本"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/add" />
+
+            <Button
+                android:id="@+id/btn_piechart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@id/btn_add"
+                android:background="@drawable/piechart1" />
+
+            <TextView
+                android:id="@+id/tv_piechart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_piechart"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@id/btn_add"
+                android:text="图表"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
